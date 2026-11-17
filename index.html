@@ -65,6 +65,7 @@
 .share-grid svg{width:22px; height:22px}
 .share-grid path{stroke:var(--ink); stroke-width:1.6; stroke-linejoin:round}
 /* More from Wordsword: a plain band below the game, off the ruled paper. Covers the fixed margin line. */
+.page{min-height:calc(100dvh - 40px)} /* the band peeks 40px above the fold so the page reads as scrollable */
 .more{--band:#F3F4F6; position:relative; z-index:1; background:var(--band); border-top:1px solid var(--rule)}
 @media (prefers-color-scheme: dark){.more{--band:#07090D}}
 .more-in{max-width:calc(var(--col) + 56px); margin:0 auto; padding:44px 20px calc(28px + env(safe-area-inset-bottom))}
