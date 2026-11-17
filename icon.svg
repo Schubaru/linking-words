@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <!-- Linking words' mark: four groups found, one highlighter colour each, written on ruled paper. -->
+  <rect width="180" height="180" rx="40" fill="#FFFFFF"/>
+  <g stroke="#E4E7EC" stroke-width="2.5">
+    <path d="M0 58H180M0 92H180M0 126H180M0 160H180"/>
+  </g>
+  <path d="M36 0V180" stroke="#F0837A" stroke-width="3"/>
+  <g style="mix-blend-mode:multiply">
+    <rect x="48" y="35" width="116" height="23" rx="8" fill="#FFE244" transform="rotate(-1.5 106 46)"/>
+    <rect x="48" y="69" width="116" height="23" rx="8" fill="#B7F0A2" transform="rotate(1 106 80)"/>
+    <rect x="48" y="103" width="116" height="23" rx="8" fill="#A6DCFF" transform="rotate(-1 106 114)"/>
+    <rect x="48" y="137" width="116" height="23" rx="8" fill="#FFB7DC" transform="rotate(1.5 106 148)"/>
+  </g>
+  <g stroke="#151B24" stroke-width="10" stroke-linecap="round">
+    <path d="M60 47H88M102 47H148"/>
+    <path d="M60 81H104M118 81H140"/>
+    <path d="M60 115H80M94 115H150"/>
+    <path d="M60 149H112M126 149H144"/>
+  </g>
+</svg>
