@@ -64,6 +64,22 @@
 .share-grid div{display:flex; gap:8px; justify-content:center}
 .share-grid svg{width:22px; height:22px}
 .share-grid path{stroke:var(--ink); stroke-width:1.6; stroke-linejoin:round}
+/* More from Wordsword: a plain band below the game, off the ruled paper. Covers the fixed margin line. */
+.more{--band:#F3F4F6; position:relative; z-index:1; background:var(--band); border-top:1px solid var(--rule)}
+@media (prefers-color-scheme: dark){.more{--band:#07090D}}
+.more-in{max-width:calc(var(--col) + 56px); margin:0 auto; padding:44px 20px calc(28px + env(safe-area-inset-bottom))}
+.more h2{margin:0 0 18px; font:700 22px/1.2 var(--rounded); letter-spacing:-.01em; color:var(--ink)}
+.games{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fit, minmax(148px, 1fr)); gap:12px}
+.game{display:flex; flex-direction:column; height:100%; padding:16px 16px 18px; border-radius:20px; background:var(--sheet); border:1px solid var(--rule); color:var(--ink); text-decoration:none; transition:transform .25s var(--ease-out), box-shadow .25s var(--ease-out)}
+.game img{width:52px; height:52px; border-radius:22%; margin-bottom:12px; box-shadow:0 0 0 1px var(--rule)}
+.game b{font:700 17px/1.3 var(--rounded)}
+.game span{margin-top:2px; font:400 15px/1.4 var(--serif); color:var(--ink2)}
+@media (hover: hover){.game:hover{transform:translateY(-2px); box-shadow:var(--lift)}}
+.game:active{transform:scale(.98)}
+.game:focus-visible{border-radius:20px}
+.fine{margin:28px 0 0; font:400 15px/1.5 var(--sans); color:var(--ink2); text-align:center}
+.fine a{color:var(--ink2)}
+@media (prefers-reduced-motion: reduce){.game{transition:none} .game:hover, .game:active{transform:none}}
 </style>
 </head>
 <body data-share-url="https://linking-words.vercel.app/">
@@ -103,8 +119,18 @@
   </div>
   <div class="controls" id="done" hidden><button class="cta outlined" type="button" id="see-results">Results</button></div>
 
-  <p class="foot">A daily game from <a href="https://schubaru.github.io/wordsword/">wordsword</a> · <a href="https://schubaru.github.io/wordsword/privacy.html">Privacy</a></p>
 </div>
+
+<footer class="more" aria-labelledby="more-title">
+  <div class="more-in">
+    <h2 id="more-title">More from Wordsword</h2>
+    <ul class="games">
+      <li><a class="game" href="https://haiklu.vercel.app/"><img src="https://haiklu.vercel.app/icon.svg" alt="" width="52" height="52" loading="lazy" decoding="async"><b>Haiklu</b><span>A new haiku every day with one word missing.</span></a></li>
+      <li><a class="game" href="https://plexicon.vercel.app/"><img src="https://plexicon.vercel.app/icon.svg" alt="" width="52" height="52" loading="lazy" decoding="async"><b>Plexicon</b><span>One word a day, and what it means.</span></a></li>
+    </ul>
+    <p class="fine">A daily game from <a href="https://schubaru.github.io/wordsword/">wordsword</a> · <a href="https://schubaru.github.io/wordsword/privacy.html">Privacy</a></p>
+  </div>
+</footer>
 
 <dialog class="sheet" id="results" aria-labelledby="verdict">
   <button class="icon close" type="button" data-close aria-label="See the board"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
